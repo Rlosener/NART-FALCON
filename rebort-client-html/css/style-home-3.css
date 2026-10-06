@@ -1,0 +1,75 @@
+:root {
+  --r: 30px; /* radius */
+  --s: 50px; /* size of the inner curve*/
+  --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%) no-repeat;
+  --theme-color1: #AE5935;
+  --theme-color2: #060C15;
+  --theme-color1-rgb: 174, 89, 53;
+  --theme-color2-rgb: 6, 12, 21;
+  --text-color-theme-color1: #ffffff;
+  --text-color-theme-color2: #211D1D;
+  --theme-color-lighter2: #696969;
+  --body-bg: #E3E8EF;
+  --gradient-1: linear-gradient(180deg, #1DC8CF 0%, #4A37C4 100%);
+  --text-color: rgba(105, 105, 105, 1);
+  --headings-color: #211D1D;
+  --link-color: var(--theme-color1);
+  --link-hover-color: var(--theme-color1);
+}
+
+.sec-title {
+  margin-bottom: 37px;
+}
+.sec-title .title {
+  color: var(--text-color-theme-color2);
+}
+
+/*=== Default Form ===*/
+.form-control, .input-text {
+  height: calc(2.25rem + 27px);
+  padding: 14px 30px;
+  outline: 0;
+  background-color: #f4f5f8;
+  border: 1px solid #f4f5f8;
+  color: #686a6f;
+  font-size: 0.9rem;
+  width: 100%;
+}
+.form-control::-webkit-input-placeholder, .input-text::-webkit-input-placeholder {
+  color: #686a6f;
+  opacity: 1;
+}
+.form-control::-moz-placeholder, .input-text::-moz-placeholder {
+  color: #686a6f;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder, .input-text:-ms-input-placeholder {
+  color: #686a6f;
+  opacity: 1;
+}
+.form-control::-ms-input-placeholder, .input-text::-ms-input-placeholder {
+  color: #686a6f;
+  opacity: 1;
+}
+.form-control::placeholder, .input-text::placeholder {
+  color: #686a6f;
+  opacity: 1;
+}
+.form-control:-ms-input-placeholder, .input-text:-ms-input-placeholder {
+  color: #686a6f;
+}
+.form-control::-ms-input-placeholder, .input-text::-ms-input-placeholder {
+  color: #686a6f;
+}
+
+textarea.form-control {
+  height: auto;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.form-control:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: none;
+}

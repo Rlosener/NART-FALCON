@@ -1,0 +1,29 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+:root {
+  --text-color: #555555;
+  --headings-color: #111111;
+  --body-bg: #ffffff;
+  --sec-title-color: var(--headings-color);
+  --container-width: 1750px;
+}
+
+.sec-title2 {
+  margin-bottom: 50px;
+}
+@media (max-width: 991.98px) {
+  .sec-title2 {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  .sec-title2 {
+    margin-bottom: 30px;
+  }
+}
+.sec-title2 h2 {
+  padding-top: 15px;
+}

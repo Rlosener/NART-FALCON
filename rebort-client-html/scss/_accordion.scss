@@ -1,0 +1,75 @@
+
+.accordion-box {
+	position: relative;
+	.block {
+		background-color: rgba(var(--theme-color-white-rgb), 0.02);
+		border-bottom: 1px solid rgba(var(--theme-color-white-rgb), 0.2);
+		border-radius: 0;
+		line-height: 1;
+		margin-bottom: 0;
+		padding: 33px 30px;
+		position: relative;
+		@include media-breakpoint-down(xl){
+			padding: 33px 60px 33px 30px;
+		}
+		.acc-btn {
+			color: #8B8B8B;
+			cursor: pointer;
+			margin-bottom: 0;
+			position: relative;
+			@include transition(all 500ms ease);
+			.icon {
+				background-color: var(--theme-color-dark);
+				border-radius: 50%;
+				color: var(--theme-color-white);
+				font-size: 18px;
+				height: 40px;
+				line-height: 40px;
+				position: absolute;
+				right: 0;
+				text-align: center;
+				top: calc(50% - 16px);
+				@include transition(all 500ms ease);
+				width: 40px;
+				@include media-breakpoint-down(xl){
+					right: -40px;
+				}
+				@include media-breakpoint-down(sm){
+				}
+			}
+			&.active {
+				color: var(--theme-color-white);
+				.icon {
+					background-color: var(--theme-color2);
+					color: var(--theme-color2-text-color);
+					&:before {
+						content: "\f068";
+					}
+				}
+			}
+		}
+		.acc-content {
+			position: relative;
+			display: none;
+			margin-top: 17px;
+
+			.content {
+				position: relative;
+				.text {
+					display: block;
+					line-height: 28px;
+					margin-bottom: 0;
+				}
+			}
+
+			&.current {
+				display: block;
+			}
+		}
+		&.active-block {
+			background-color: rgba(var(--theme-color-white-rgb), 0.05);
+			border-bottom: none;
+			border-radius: 6px;
+		}
+	}
+}

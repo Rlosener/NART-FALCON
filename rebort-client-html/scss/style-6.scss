@@ -1,0 +1,19 @@
+//Root 
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+
+
+:root {
+  
+  //body
+  --body-bg:          #212121;
+  
+  //container
+  --container-width: 1850px;
+}

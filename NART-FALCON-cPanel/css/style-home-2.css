@@ -1,0 +1,28 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+:root {
+  --r: 30px; /* radius */
+  --s: 50px; /* size of the inner curve*/
+  --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%) no-repeat;
+  --theme-color1: #C9F31D;
+  --theme-color2: #002828;
+  --theme-color1-rgb: 201, 243, 29;
+  --theme-color2-rgb: 0, 40, 40;
+  --body-bg: #063232;
+  --body-font-size: 16px;
+  --body-line-height: 1.5;
+  --body-font-weight: 400;
+  --gradient-1: linear-gradient(180deg, #040B1D 33.14%, #0745E3 101.28%);
+  --gradient-2: linear-gradient(89.51deg, #040B1D -14.03%, #0A308D 99.77%);
+  --gradient-3: linear-gradient(180deg, #1AAFD8 0%, #3055EB 49.19%, #B443FF 100%);
+  --gradient-4: linear-gradient(90deg, #0A308D -9.47%, #040B1D 91.33%);
+  --gradient-5: linear-gradient(90deg, #040B1D 0%, #0A308D 85.07%);
+  --gradient-6: linear-gradient(180deg, #040B1D 43.39%, #0745E3 156.01%);
+  --gradient-7: linear-gradient(180deg, #040B1D 33.14%, #0745E3 101.28%);
+  --gradient-8: linear-gradient(276.76deg, #B443FF 2.43%, #3055EB 47.44%, #1AAFD8 91.01%);
+  --gradient-9: linear-gradient(180deg, #040B1D 43.39%, #0745E3 156.01%);
+  --h6-font-weight: 600;
+}

@@ -1,0 +1,422 @@
+@keyframes borderanimate2 {
+ 0% {
+   transform: translate(-50%, -50%) scale(.8);
+ }
+ 60%{
+   opacity: 1;
+ }
+ 100% {
+   transform: translate(-50%, -50%) scale(2.5);
+   opacity: 0;
+ }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*** 
+
+====================================================================
+  Anim Icons
+====================================================================
+
+***/
+
+.reveal {
+  position: relative;
+  display: inline-flex;
+  visibility: hidden;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform-origin: left;
+  }   
+}
+
+.anim-icons {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  pointer-events: none;
+  .shape-leaf1 {
+    position: absolute;
+    left: 39px;
+    bottom: 0;
+    @media (max-width: 1599.98px) {
+      display: none;
+    }
+  }
+  .shape-leaf2 {
+    position: absolute;
+    right: 39px;
+    bottom: 0;
+    @media (max-width: 1599.98px) {
+      display: none;
+    }
+  }
+  &.align-top {
+    .shape-leaf1,
+    .shape-leaf2 {
+      bottom: auto;
+      top: 0;
+    }
+  }
+}
+
+[text-split] {
+  opacity: 0;
+}
+
+.word {
+  overflow: hidden;
+  padding-bottom: 0;
+  margin-bottom: -0.1em;
+  transform-origin: bottom;
+}
+
+.anim-icons.full-width {
+  max-width: 100%;
+  pointer-events: none;
+}
+
+.anim-icons .icon {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.bounce-y{
+  animation: bounce-y 5s infinite linear;
+}
+
+.bounce-x{
+  animation: bounce-x 10s infinite linear;
+}
+
+.zoom-one{
+  animation: zoom-one 10s infinite linear;
+}
+
+.zoom-two{
+  animation: zoom-two 5s infinite linear;
+}
+
+.zoom-three{
+  animation: zoom-three 5s infinite linear;
+}
+
+
+
+.reveal-left {
+  -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  &.animated {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+.reveal-right {
+  -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  -webkit-transition: all 0.8s;
+  -o-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  &.animated {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes float{
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-y {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-x {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoom-one {
+  0% {
+    transform: scale(.95);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(.95);
+  }
+}
+
+@keyframes zoom-two {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes round-shape-anim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(194, 167, 78, .08), 0 0 0 30px rgba(194, 167, 78, .08), 0 0 0 50px rgba(194, 167, 78, .08);
+  }
+  100% {
+    box-shadow: 0 0 0 30px rgba(194, 167, 78, .08), 0 0 0 50px rgba(194, 167, 78, .08), 0 0 0 70px rgba(194, 167, 78, 0);
+  }
+}
+
+
+.overlay-anim {
+  position: relative;
+  &:after {
+    background: rgba(255, 255, 255, 0.3);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+    opacity: 1;
+    z-index: 9;
+    pointer-events: none;
+  }
+  &:hover{
+    &:after {
+      height: 100%;
+      opacity: 0;
+      transition: all 400ms linear;
+    }
+  }   
+}
+
+.overlay-anim-two {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+  &:hover {
+    &:after {
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: all 400ms linear;
+    }
+  }
+  &:after {
+    background: rgba(255, 255, 255, .3);
+    bottom: 0;
+    content: "";
+    left: 50%;
+    position: absolute;
+    right: 51%;
+    top: 0;
+    opacity: 1;
+    pointer-events: none;
+    transition: all 300ms linear;
+  }
+}
+
+
+
+// Animated Moving Circles
+
+// Animation rotate area start here ***
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.animation__rotate {
+	animation: rotate 30s linear infinite;
+}
+@keyframes rotateY {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+.animation__rotateY {
+	animation: rotateY 30s linear infinite;
+}
+@keyframes rotateX {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.animation__rotateX {
+	animation: rotateX 10s linear infinite;
+}
+@keyframes rotateX {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.rotateX {
+	animation: rotateX 30s linear infinite;
+}
+
+.circle {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  left: -10px;
+  top: -10px;
+  border-radius: 100%;
+  z-index: 1;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+  @supports (mix-blend-mode: difference) {
+    background-color: white;
+    mix-blend-mode: difference;
+  }
+  @include for-md{
+    display: none !important;
+  }
+}
+.circleZoom{
+  animation: circlezoomrotate 15s infinite linear;
+  animation-direction: alternate;
+}
+.circle-follow {
+  position: fixed;
+  mix-blend-mode: difference;
+  width: 30px;
+  height: 30px;
+  left: -21px;
+  top: -21px;
+  border-radius: 100%;
+  z-index: 1;
+  user-select: none;
+  pointer-events: none;
+  z-index: 10000;
+  transform: scale(1);
+  @supports (mix-blend-mode: difference) {
+    border: 1px solid #fff;
+    mix-blend-mode: difference;
+  }
+  @include for-md {
+    display: none !important;
+  }
+}
+
+
+/* Animate 1 */
+.owl-carousel{
+  .animate-7,
+  .animate-6,
+  .animate-5,
+  .animate-4,
+  .animate-3,
+  .animate-2,
+  .animate-1{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 500ms ease;
+  }
+  .animate-x {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 500ms ease;
+  }
+  
+  .active{
+    .animate-7,
+    .animate-6,
+    .animate-5,
+    .animate-4,
+    .animate-3,
+    .animate-2,
+    .animate-1 {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .animate-2 {
+      transition-delay: 300ms;
+    }
+    .animate-3 {
+      transition-delay: 600ms;
+    }
+    .animate-4 {
+      transition-delay: 900ms;
+    }
+    .animate-5 {
+      transition-delay: 1200ms;
+    }
+    .animate-6 {
+      transition-delay: 1500ms;
+    }
+    .animate-7 {
+      transition-delay: 1800ms;
+    }
+  }
+}

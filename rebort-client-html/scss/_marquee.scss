@@ -1,0 +1,50 @@
+
+/***
+
+====================================================================
+    Marquee Section
+====================================================================
+
+***/
+
+.about4-marquee {
+  position: relative;
+  --duration: 30s;
+  --gap: 0px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  background-color: #000000;
+  gap: var(--gap);
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+    animation: scroll var(--duration) linear infinite;
+  }
+  .text {
+    position: relative;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+    color: var(--theme-color-white);
+    transition: all .4s ease-in-out;
+  }
+  .marquee-icon {}
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation-play-state: play;
+    }
+  }
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+}

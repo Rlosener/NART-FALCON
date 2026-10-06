@@ -1,0 +1,61 @@
+/*** 
+
+====================================================================
+funfact-section
+====================================================================
+
+***/
+.funfact-section {
+	position: relative;
+	padding: 120px 0;
+	@include media-breakpoint-down(lg){
+		padding: 80px 0;
+	}
+}
+.funfact-block {
+	.inner-block {
+		position: relative;
+		margin-bottom: 20px;
+		background-color: rgba(241, 241, 241, 0.95);
+	    padding: 44px 50px 34px;
+	    @include media-breakpoint-down(xl){
+	    	padding: 20px;
+	    }
+	    &:hover {
+	    	.shape {
+	    		transform: scaleX(-1);
+	    	}
+	    }
+	}
+	.shape {
+		position: absolute;
+		top: 0;
+		right: 50px;
+		@include transition(all 300ms ease);
+		@include media-breakpoint-down(xl){
+			right: 20px;
+		}
+	}
+	.title {
+		margin-bottom: 9px;
+		@include media-breakpoint-down(sm){
+			margin-bottom: 4px;
+		}
+	}
+	.count-box {
+		font-size: 100px;
+		letter-spacing: -0.05em;
+		color: var(--headings-color);
+		font-family: var(--body-font-family);
+		display: flex;
+		align-items: flex-start;
+		gap: 18px;
+		span {
+			font-size: 40px;
+			line-height: 1;
+		}
+		.count-text {
+			line-height: 1;
+		}
+	}
+}

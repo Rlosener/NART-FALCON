@@ -1,0 +1,21 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+:root {
+  --text-color: #555555;
+  --headings-color: #111111;
+  --body-bg: #ffffff;
+  --heading-font-family2: "Tartuffo-Trial", sans-serif;
+  --sec-title-color: var(--headings-color);
+  --container-width: 1838px;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Tartuffo-Trial";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Tartuffo-Trial/Tartuffo_Trial.otf") format("woff2");
+}

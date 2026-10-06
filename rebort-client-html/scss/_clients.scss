@@ -1,0 +1,114 @@
+/***
+
+====================================================================
+    Brand Section
+====================================================================
+
+***/
+.brand-section {
+    padding: 120px 0;
+    position: relative;
+    @include media-breakpoint-down(lg){
+        padding: 80px 0;
+    }
+    .brand-text {
+        font-size: 20px;
+        line-height: 28px;
+        color: #FCF7F3;
+        margin: 0 auto;
+        max-width: 338px;
+        text-align: center;
+    }
+    .outer-box {
+        margin-top: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+.brand-box {
+    .inner-box {
+        border: 1px solid rgba(var(--theme-color-white-rgb), 0.1);
+        border-radius: 50%;
+        width: 293px;
+        height: 293px;
+        line-height: 293px;
+        text-align: center;
+    }
+}
+
+/***
+
+====================================================================
+    Clients Section
+====================================================================
+
+***/
+.clients-section {
+    .clients-outer {
+        background-color: #1A1A1A;
+        padding: 55px 100px 46px;
+        @include media-breakpoint-down(sm){
+            padding: 30px 20px;
+        }
+    }
+    .title {
+        margin-bottom: 44px;
+        text-align: center;
+        @include media-breakpoint-down(sm){
+            br {
+                display: none;
+            }
+        }
+    }
+}
+.client-box {
+    .inner-box {
+        &:hover {
+            .client-image {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .client-image {
+        text-align: center;
+        img {
+            cursor: pointer;
+            opacity: 0.5;
+            @include transition(all 300ms ease);
+        }
+    }
+}
+
+
+.clients-section-three {
+    .clients-outer {
+        max-width: 1520px;
+        margin: 0 auto;
+        padding-top: 56px;
+    }
+}
+
+.client-box-two {
+    .inner-box {
+        &:hover {
+            .client-image {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .client-image {
+        text-align: center;
+        img {
+            cursor: pointer;
+            opacity: 0.5;
+            @include transition(all 300ms ease);
+        }
+    }
+}

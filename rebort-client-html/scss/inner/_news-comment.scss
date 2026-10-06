@@ -1,0 +1,60 @@
+/*** 
+
+====================================================================
+    Comments
+====================================================================
+
+***/
+.comment-one {
+  .comment-one__title {
+    margin-bottom: 30px;
+  }
+  .comment-one__single {
+    align-items: start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    @media only screen and (max-width: 767px){
+      flex-direction: column;
+    }
+  }
+  .comment-one__content {
+    position: relative;
+    @media only screen and (max-width: 767px){
+      margin-left: 0;
+      margin-top: 20px;
+    }
+    .h3 {
+      color: var(--theme-color2-text-color);
+      font-size: 20px;
+      margin: 0;
+      margin-bottom: 24px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  .comment-one__btn {
+    font-size: 14px;
+    padding: 5px 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .comment-one__image {
+    border-radius: 50%;
+    display: block;
+    flex: 100px 0 0 ;
+    position: relative;
+    img {
+      border-radius: 50%;
+    }
+  }
+}
+.comment-form {
+  .comment-form__title {
+    margin-top: -7px;
+  }
+}

@@ -1,0 +1,9 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+:root {
+  --container-width: 1750px;
+  --large-container-width: 1850px;
+}

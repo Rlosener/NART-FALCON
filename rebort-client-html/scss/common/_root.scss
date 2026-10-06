@@ -1,0 +1,130 @@
+//Root 
+@function hexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+
+//main theme colors
+$theme-color1: #FD3F00;
+$theme-color2: #111111;
+
+// text color over theme color bg
+$theme-color1-text-color: #ffffff;
+$theme-color2-text-color: #ffffff;
+
+:root {
+  --r: 30px; /* radius */
+  --s: 50px; /* size of the inner curve*/
+  --_m:/calc(2*var(--r)) calc(2*var(--r)) radial-gradient(#000 70%,#0000 72%) no-repeat;
+  
+  //theme color
+  --theme-color1: #{$theme-color1};
+  --theme-color2: #{$theme-color2};
+
+  --theme-color1-text-color: #{$theme-color1-text-color};
+  --theme-color2-text-color: #{$theme-color2-text-color};
+
+  //rgb version of those theme colors
+  --theme-color1-rgb: #{hexToRGB($theme-color1)};
+  --theme-color2-rgb: #{hexToRGB($theme-color2)};
+
+  --theme-color-white: #ffffff;
+  --theme-color-white-rgb: 255,255,255;
+  --theme-color-lighter: #474747;
+  --theme-color-silver: #F5F5F5;
+  --review-color: #FFAA18;
+
+  --theme-color-black: #000000;
+  --theme-color-black-rgb: 0, 0, 0;
+  --theme-color-dark:  #000002;
+  --theme-color-gray:  #505050;
+
+
+  //Gradients
+  --gradient-1: linear-gradient(90deg, #FF7903 0%, #F55CAD 65.38%, #716CEE 100%);
+
+    
+  //text heading color
+  --text-color:         #999999;
+  --headings-color:     #ffffff;
+  --link-color:         var(--theme-color1);
+  --link-hover-color:   var(--theme-color1);
+
+
+  //font family  
+  --body-font-family: "DM Sans", sans-serif;
+  --heading-font-family: "BDOGrotesk", sans-serif;
+  --heading-font-family2: "Thunder", sans-serif;
+  
+  //body
+  --body-bg:          #111111;
+  --body-font-size:   20px;
+  --body-line-height: 28px;
+  --body-font-weight: 400;
+
+  //heading font size + weight
+  --line-height-heading-h1: 1.2625em;
+  --line-height-heading-h2: 85px;
+  --line-height-heading: 1.41667em;
+  --line-height-heading-small: 1.4em;
+
+  --h1-font-size: 100px;
+  --h2-font-size: 85px;
+  --h3-font-size: 30px;
+  --h4-font-size: 24px;
+  --h5-font-size: 20px;
+  --h6-font-size: 16px;
+
+  --h1-font-weight: 400;
+  --h2-font-weight: 400;
+  --h3-font-weight: 400;
+  --h4-font-weight: 400;
+  --h5-font-weight: 400;
+  --h6-font-weight: 400;
+
+  //section sub title
+  --sec-title-subtitle-color: var(--theme-color-white);
+  --sec-title-subtitle-font-size: 18px;
+  --sec-title-subtitle-font-family: var(--heading-font-family);
+  --sec-title-subtitle-font-weight: 400;
+  --sec-title-subtitle-line-height: 1;  
+
+  //section title
+  --sec-title-color:                 var(--theme-color-white);
+  --sec-title-font-size:             var(--h2-font-size);
+  --sec-title-font-family:           var(--heading-font-family);
+  --sec-title-font-weight:           400;
+  --sec-title-title-line-height:     var(--line-height-heading-h2);
+
+  //news details page
+  --theme-light-background: #133241;
+  --theme-light-background-text-color: var(--headings-color);
+  --theme-black:        #000000;
+
+  //container
+  --container-width: 1890px;
+  --small-container-width: 1000px;
+  --medium-container-width: 1320px;
+  --large-container-width: 1750px;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "BDOGrotesk";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/bdo-grotesk/BDOGrotesk-Regular.otf")
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Thunder";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/thunder/Thunder-VF.otf") format("woff2");
+}

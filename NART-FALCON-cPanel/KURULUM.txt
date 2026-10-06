@@ -1,0 +1,43 @@
+NART FALCON KURUMSAL SITE - CPANEL KURULUMU
+===========================================
+
+GEREKSINIMLER
+- Apache/cPanel hosting
+- PHP 8.1 veya daha yeni
+- PHP mail() veya hostingin calisan posta tasima servisi
+- Gecerli SSL sertifikasi
+
+KURULUM
+1. Mevcut belge kokundeki dosyalarin tamamini yedekleyin.
+2. Kurumsal site ZIP dosyasinin ICINDEKI dosyalari ana domainin belge kokune
+   cikartin. Ek bir sarmalayici klasor yoktur; index.html kokte bulunur.
+3. js/nart-config.js dosyasinda gercek ana domain, magaza alt domaini ve herkese
+   acik iletisim bilgilerini tanimlayin. Bu dosyaya sifre veya gizli anahtar yazmayin.
+4. robots.txt ve sitemap.xml icindeki domaini gercek HTTPS domainiyle kontrol edin.
+5. NART_CONTACT_EMAIL ve NART_FROM_EMAIL ortam degiskenlerini hostingde tanimlayin.
+6. Ana sayfa, mobil/sticky menu, magaza baglantisi, gizlilik ve 404 sayfasini test edin.
+7. Masaustu ve mobil cihazdan gercek form gonderip posta kutusuna teslimi dogrulayin.
+8. Kurulumdan sonra ZIP dosyasini belge kokunden kaldirin.
+
+ILETISIM FORMU
+- CSRF, honeypot, 32 KB istek siniri, 20 saniye istemci timeout'u ve 60 saniye
+  oturum bazli hiz siniri etkindir.
+- Gizlilik onayi olmadan sunucu formu kabul etmez.
+- NART_CONTACT_EMAIL: mesajlari alacak gercek adres.
+- NART_FROM_EMAIL: alan adina ait, sunucunun gondermeye yetkili oldugu adres.
+- Bu iki deger gecersizse form basarili sonucu taklit etmez ve 503 yaniti verir.
+
+SEO VE GIZLILIK
+- Canonical, Open Graph ve yapilandirilmis veri js/nart-config.js icindeki
+  corporateSiteUrl uzerinden olusturulur.
+- Ilk MVP'de analitik veya reklam cerezleri yoktur.
+- page-privacy.html on bilgilendirmedir. Gercek isletme kimligi ve faaliyet
+  ulkesine gore yetkili kisi tarafindan onaylanmadan nihai hukuk metni sayilmaz.
+
+GERI DONUS
+- Yayin oncesi alinan belge koku yedegini geri yukleyin.
+- Bu paket veritabani kullanmaz; formun sunucu ortam degiskenlerini ayrica geri alin.
+
+CANLI KABUL SINIRI
+Bu yerel paket yapisal olarak dogrulanmistir. DNS, SSL, Apache AllowOverride,
+PHP mail teslimi ve gercek cPanel davranisi hosting erisimi olmadan dogrulanmis sayilmaz.

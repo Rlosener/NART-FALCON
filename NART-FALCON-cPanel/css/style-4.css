@@ -1,0 +1,13 @@
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: false;
+}
+:root {
+  --text-color: #555555;
+  --headings-color: #111111;
+  --body-bg: #ffffff;
+  --sec-title-color: var(--headings-color);
+  --container-width: 1750px;
+  --large-container-width: 1850px;
+}

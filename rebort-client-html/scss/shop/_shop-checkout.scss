@@ -1,0 +1,68 @@
+.our-checkout{
+	.table>:not(caption)>*>*{
+		background-color: rgba(var(--theme-color-white-rgb), 0.05);
+		border-color: rgba(var(--theme-color-white-rgb), 0.1);
+		color: var(--theme-color2-text-color);
+	}
+	table.table.tbl-shopping-cart th,
+	table.table.tbl-shopping-cart td{
+		border-left: 1px solid rgba(var(--theme-color-white-rgb), 0.1);
+	}
+}
+.payment-method {
+	.accordion-box {
+		.block {
+			background-color: rgba(var(--theme-color-white-rgb), 0.05);
+			box-shadow: none;
+			margin-bottom: 20px;
+			padding: 30px;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+			.acc-content {
+				.payment-info {
+					background-color: rgba(var(--theme-color-white-rgb), 0.05);
+					display: block;
+					padding: 30px;
+					position: relative;
+					@include media-breakpoint-down(sm){
+						padding: 30px;
+					}
+				}
+			}
+			.acc-btn {
+				padding: 19px 50px 22px 30px;
+				.icon-outer {
+					color: var(--theme-color2-text-color);
+					font-size: 28px;
+					height: auto;
+					position: absolute;
+					right: 30px;
+					top: 50%;
+					transform: translateY(-50%);
+					@include media-breakpoint-down(sm){
+						right: 10px;
+					}
+				}
+				&.active {
+					padding: 19px 50px 22px 30px;
+					.icon-outer {
+						color: var(--theme-color2-text-color);
+						@include media-breakpoint-down(sm){
+							right: 15px;
+						}
+					}
+				}
+			}
+		}
+	}
+	.payment-method {
+		.h3 {
+			margin-bottom: 32px;
+		}
+	}
+	.accordion-box .block .acc-btn.active {
+		background-color: var(--theme-color1);
+		color: var(--theme-color1-text-color);
+	}
+}
